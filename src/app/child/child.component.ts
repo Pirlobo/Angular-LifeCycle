@@ -80,12 +80,14 @@ export class ChildComponent
     console.log('AfterContentChecked - ' + this.childContent);
   }
 
+  // called after first ngAfterContentChecked
   ngAfterViewInit() {
     console.log('Child After View Init');
     console.log('AfterViewInit - ' + this.childContent.textContent);
   }
 
+  // called after ngAfterViewInit and after every subsequent ngAfterContentChecked
   ngAfterViewChecked() {
-    console.log('Child After View checked');
+    console.log('Child After View checked'); 
   }
 }
